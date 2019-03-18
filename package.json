@@ -1,12 +1,24 @@
 {
-  "name": "brain-games-project-1",
+  "name": "brain-games-fulerent",
   "version": "1.0.0",
   "description": "My first project",
-  "main": "index.js",
+  "main": "main.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+   },
+   "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fulerent/project-lvl1-s462"
+  },
+  "author": "Kirill",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
