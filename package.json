@@ -2,7 +2,12 @@
   "name": "brain-games-fulerent",
   "version": "1.1.1",
   "description": "My first project",
-  "keywords": "brain,games",
+  "keywords": [
+    "brain",
+    "games",
+    "project1",
+    "hexlet"
+  ],
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -24,7 +29,13 @@
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.4",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
     "readline-sync": "^1.4.9"
   },
-  "dependencies": {}
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
 }

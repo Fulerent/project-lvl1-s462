@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import name from '..';
+import inputName from '..';
 console.log('Welcome to the Brain Games!');
-name();
+inputName();
