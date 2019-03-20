@@ -1,34 +1,28 @@
 import readlineSync from 'readline-sync';
-/* Спаршиваем имя */
-const inputName = () => {
-  const firstName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${firstName}!`);
-  return firstName;
-};
-/* Генирируем случайное число */
-const generationNumber = (min = 1, max = 99) => Math.floor(1 + Math.random() * (max + min - min));
-/* Выводим это число */
-const printQuestion = (number) => {
-  console.log(`Question: ${number}`);
-  return number;
-};
-/* Проверка правильности ответа */
-const isResult = (ask, answer) => (answer === 'no' && ask % 2 !== 0 || answer === 'yes' && ask % 2 === 0 ? true : false);
-/* Основная функция */
-const gameOfBrains = () => {
+
+const runCoreGame = (rule, number, isResult) => {
   console.log('Welcome to the Brain Games!');
-  console.log('Answer "yes" if number even otherwise answer "no".');
-  const name = inputName();
-  for (let i = 0; i < 3; i += 1) {
-    const numberIsQuestion = printQuestion(generationNumber(1, 99));
+  console.log(rule);
+  
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}`);
+  
+  const gameToWin = 3;
+
+  for (let i = 0; i < gameToWin; i += 1) {
+    const numberIsQuestion = number(1, 99);
+    console.log(`Question: ${numberIsQuestion}`);
     const userAnswer = readlineSync.question('Your answer? ');
-    if (isResult(numberIsQuestion, userAnswer)) {
+    if (isResult(numberIsQuestion) === userAnswer) {
       console.log('Correct!');
     } else {
-      return console.log(`'no' is wrong answer ;(.\nCorrect answer was 'yes'. Let's try again, ${name}!'`);
+      console.log("'no' is wrong answer ;(.");
+      console.log(`Correct answer was 'yes'. Let's try again, ${userName}!'`);
+      return;
     }
   }
-  console.log(`Congratulations, ${name}!`);
+
+  console.log(`Congratulations, ${userName}!`);
 };
 
-export default gameOfBrains;
+export default runCoreGame;
