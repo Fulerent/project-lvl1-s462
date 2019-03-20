@@ -13,10 +13,7 @@ const printQuestion = (number) => {
   return number;
 };
 /* Проверка правильности ответа */
-const isResult = (ask, answer) => {
-  if (answer === 'no' && ask % 2 !== 0 || answer === 'yes' && ask % 2 === 0) return true;
-  return false; // не знаю, как в одну строку проверить ответ пользователя
-};
+const isResult = (ask, answer) => (answer === 'no' && ask % 2 !== 0 || answer === 'yes' && ask % 2 === 0 ? true : false);
 /* Основная функция */
 const gameOfBrains = () => {
   console.log('Welcome to the Brain Games!');
