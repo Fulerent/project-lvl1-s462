@@ -12,11 +12,11 @@ const runCoreGame = (rule, outputQuestion) => {
     const { numberQuastion, answer } = outputQuestion();
     console.log(`Question: ${numberQuastion}`);
     const userAnswer = readlineSync.question('Your answer? ');
-    if (answer === userAnswer) {
+    if (answer == userAnswer) {
       console.log('Correct!');
     } else {
-      console.log("'no' is wrong answer ;(.");
-      console.log(`Correct answer was 'yes'. Let's try again, ${userName}!'`);
+      console.log(`${userAnswer} is wrong answer ;(.`);
+      console.log(`Correct answer was ${answer}. Let's try again, ${userName}!'`);
       return;
     }
   }
