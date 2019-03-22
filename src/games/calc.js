@@ -1,25 +1,25 @@
 import runCoreGame from '..';
+import generitionNum from '../generic';
 
-const generitionNum = (min, max) => Math.floor(1 + Math.random() * (max + min - min));
 const rulesTheGame = 'What is the result of the expression?';
 
 const sing = ['+', '-', '*'];
-const generationSing = sin => sin[generitionNum(0, 2)];
+const generationSing = sin => sin[generitionNum(0, sing.length - 1)];
 
 
-const outputQuastion = () => {
+const outputQuestion = () => {
   const oneNumber = generitionNum(1, 99);
   const twoNumber = generitionNum(1, 99);
   const singQuastion = generationSing(sing);
   const numberQuastion = `${oneNumber} ${singQuastion} ${twoNumber}`;
-  let result = '';
+  let answer = '';
   switch (singQuastion) {
-    case '+': result += oneNumber + twoNumber; break;
-    case '-': result += oneNumber - twoNumber; break;
-    case '*': result += oneNumber * twoNumber; break;
+    case '+': answer += oneNumber + twoNumber; break;
+    case '-': answer += oneNumber - twoNumber; break;
+    case '*': answer += oneNumber * twoNumber; break;
     default:
   }
-  return { numberQuastion, result };
+  return { numberQuastion, answer };
 };
 
-export default () => runCoreGame(rulesTheGame, outputQuastion);
+export default () => runCoreGame(rulesTheGame, outputQuestion);
