@@ -20,7 +20,7 @@ const searchRigthAnswer = (sequence, step) => {
   const sequenceArray = sequence.split(' ');
   for (let i = 0; i < sequence.length; i += 1) {
     if (sequenceArray[i] === '..') {
-      return Number(sequenceArray[i - 1] + step);
+      return Number(sequenceArray[i - 1]) + Number(step);
     }
   }
   return 0; // не знаю, что вернуть в f(), чтобы линтер не выдовал ошибку об отсутствие return

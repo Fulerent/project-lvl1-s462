@@ -6,3 +6,9 @@ My first project in Hexlet<br>
 [![Build Status](https://travis-ci.com/Fulerent/project-lvl1-s462.svg?branch=master)](https://travis-ci.com/Fulerent/project-lvl1-s462) <br>
 <br>
 <a href="https://asciinema.org/a/GPe4ezZJhnEeR28FnyETItVG8" target="_blank"><img src="https://asciinema.org/a/GPe4ezZJhnEeR28FnyETItVG8.svg" /></a>
+<br>
+<a href="https://asciinema.org/a/LM4mIkRV88uOvv2fLpJU97tkP" target="_blank"><img src="https://asciinema.org/a/LM4mIkRV88uOvv2fLpJU97tkP.svg" /></a>
+<br>
+<a href="https://asciinema.org/a/RDpzvZ4CC1vrZO6kVFcy6puSm" target="_blank"><img src="https://asciinema.org/a/RDpzvZ4CC1vrZO6kVFcy6puSm.svg" /></a>
+<br>
+<a href="https://asciinema.org/a/ZBynx5irDndrkJzdZ742vJbPy" target="_blank"><img src="https://asciinema.org/a/ZBynx5irDndrkJzdZ742vJbPy.svg" /></a>
