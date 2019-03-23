@@ -12,3 +12,5 @@ My first project in Hexlet<br>
 <a href="https://asciinema.org/a/RDpzvZ4CC1vrZO6kVFcy6puSm" target="_blank"><img src="https://asciinema.org/a/RDpzvZ4CC1vrZO6kVFcy6puSm.svg" /></a>
 <br>
 <a href="https://asciinema.org/a/ZBynx5irDndrkJzdZ742vJbPy" target="_blank"><img src="https://asciinema.org/a/ZBynx5irDndrkJzdZ742vJbPy.svg" /></a>
+<br>
+<a href="https://asciinema.org/a/qK5vPtDsio3MsDz0YI6lvw1hi" target="_blank"><img src="https://asciinema.org/a/qK5vPtDsio3MsDz0YI6lvw1hi.svg" /></a>
