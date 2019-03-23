@@ -3,23 +3,21 @@ import generitionNum from '../generic';
 
 const rulesTheGame = 'What is the result of the expression?';
 
-const sing = ['+', '-', '*'];
-const generationSing = sin => sin[generitionNum(0, sing.length - 1)];
+const sings = ['+', '-', '*'];
 
-
-const outputQuestion = () => {
+const processData = () => {
   const oneNumber = generitionNum(1, 99);
   const twoNumber = generitionNum(1, 99);
-  const singQuastion = generationSing(sing);
-  const numberQuastion = `${oneNumber} ${singQuastion} ${twoNumber}`;
+  const singQuestion = sings[generitionNum(0, sings.length - 1)];
+  const numberQuestion = `${oneNumber} ${singQuestion} ${twoNumber}`;
   let answer = '';
-  switch (singQuastion) {
-    case '+': answer += oneNumber + twoNumber; break;
-    case '-': answer += oneNumber - twoNumber; break;
-    case '*': answer += oneNumber * twoNumber; break;
+  switch (singQuestion) {
+    case '+': answer = oneNumber + twoNumber; break;
+    case '-': answer = oneNumber - twoNumber; break;
+    case '*': answer = oneNumber * twoNumber; break;
     default:
   }
-  return { numberQuastion, answer };
+  return { numberQuestion, answer };
 };
 
-export default () => runCoreGame(rulesTheGame, outputQuestion);
+export default () => runCoreGame(rulesTheGame, processData);
