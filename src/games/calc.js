@@ -1,23 +1,27 @@
 import runCoreGame from '..';
-import generitionNum from '../generic';
+import generateNumber from '../generic';
 
-const rulesTheGame = 'What is the result of the expression?';
+const descriptionGame = 'What is the result of the expression?';
 
 const sings = ['+', '-', '*'];
 
-const processData = () => {
-  const oneNumber = generitionNum(1, 99);
-  const twoNumber = generitionNum(1, 99);
-  const singQuestion = sings[generitionNum(0, sings.length - 1)];
-  const numberQuestion = `${oneNumber} ${singQuestion} ${twoNumber}`;
-  let answer = '';
-  switch (singQuestion) {
-    case '+': answer = oneNumber + twoNumber; break;
-    case '-': answer = oneNumber - twoNumber; break;
-    case '*': answer = oneNumber * twoNumber; break;
+const getResult = (sing, num1, num2) => {
+  switch (sing) {
+    case '+': return num1 + num2;
+    case '-': return num1 - num2;
+    case '*': return num1 * num2;
     default:
   }
-  return { numberQuestion, answer };
+  return 'Ошибка знака';
 };
 
-export default () => runCoreGame(rulesTheGame, processData);
+const getData = () => {
+  const firstNumber = generateNumber(1, 99);
+  const secondNumber = generateNumber(1, 99);
+  const sing = sings[generateNumber(0, sings.length - 1)];
+  const question = `${firstNumber} ${sing} ${secondNumber}`;
+  const answer = String(getResult(sing, firstNumber, secondNumber));
+  return { question, answer };
+};
+
+export default () => runCoreGame(descriptionGame, getData);

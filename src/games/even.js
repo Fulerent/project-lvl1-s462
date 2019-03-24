@@ -1,13 +1,13 @@
 import runCoreGame from '..';
-import generitionNum from '../generic';
+import generateNumber from '../generic';
 
-const rulesTheGame = 'Answer "yes" if number even otherwise answer "no".';
-const isEven = num => (num % 2 === 0 ? 'yes' : 'no');
+const descriptionGame = 'Answer "yes" if number even otherwise answer "no".';
+const isEven = num => num % 2 === 0;
 
-export const processData = () => {
-  const numberQuestion = generitionNum(1, 99);
-  const answer = isEven(numberQuestion);
-  return { numberQuestion, answer };
+export const getData = () => {
+  const question = generateNumber(1, 99);
+  const answer = isEven(question) ? 'yes' : 'no';
+  return { question, answer };
 };
 
-export default () => runCoreGame(rulesTheGame, processData);
+export default () => runCoreGame(descriptionGame, getData);

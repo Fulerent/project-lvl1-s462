@@ -1,19 +1,19 @@
 import runCoreGame from '..';
-import generitionNum from '../generic';
+import generateNumber from '../generic';
 
-const rulesTheGame = 'Find the greatest common divisor of given numbers.';
+const descriptionGame = 'Find the greatest common divisor of given numbers.';
 
-const processData = () => {
-  const oneNumber = generitionNum(1, 47);
-  const twoNumber = generitionNum(47, 99);
-  const numberQuestion = `${oneNumber} ${twoNumber}`;
-  const smallestТumbers = oneNumber < twoNumber ? oneNumber : twoNumber;
-  const isEval = (divisor) => {
-    if (oneNumber % divisor === 0 && twoNumber % divisor === 0) return divisor;
-    return isEval(divisor - 1);
-  };
-  const answer = String(isEval(smallestТumbers));
-  return { numberQuestion, answer };
+const getDivisor = (num1, num2) => {
+  if (num1 % num2 === 0) return String(num2);
+  return getDivisor(num2, num1 % num2);
 };
 
-export default () => runCoreGame(rulesTheGame, processData);
+const getData = () => {
+  const firstNumber = generateNumber(1, 47);
+  const secondNumber = generateNumber(47, 99);
+  const question = `${firstNumber} ${secondNumber}`;
+  const answer = getDivisor(firstNumber, secondNumber);
+  return { question, answer };
+};
+
+export default () => runCoreGame(descriptionGame, getData);

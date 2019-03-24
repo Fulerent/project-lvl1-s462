@@ -1,5 +1,5 @@
 install: 
-	install npm
+	npm install
 
 start: 
 	npx babel-node src/bin/brain-prime.js
